@@ -1,0 +1,81 @@
+/* Container styling */
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f8faff; /* Very light blue background */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading styles */
+.about-container h1 {
+    color: #2b4c7e; /* Deep blue */
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #ffd700; /* Golden yellow accent */
+    padding-bottom: 0.5rem;
+}
+
+.about-container h2 {
+    color: #4b6fa1; /* Medium blue */
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+/* Profile image styling */
+.profile-image-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.profile-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffd700; /* Golden yellow border */
+    box-shadow: 0 0 20px rgba(43, 76, 126, 0.2); /* Soft blue shadow */
+}
+
+/* Bio section styling */
+.bio-section {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #ffd700; /* Golden yellow accent */
+}
+
+.bio-section p {
+    color: #2b4c7e; /* Deep blue text */
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Hover effects */
+.profile-image:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1rem;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .about-container h1 {
+        font-size: 2rem;
+    }
+    
+    .about-container h2 {
+        font-size: 1.5rem;
+    }
+}

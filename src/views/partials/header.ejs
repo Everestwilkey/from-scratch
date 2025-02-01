@@ -1,0 +1,12 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><%= title %></title>
+<% if (typeof stylesheets !== 'undefined') { %>
+    <% stylesheets.forEach(function(sheet) { %>
+        <link rel="stylesheet" href="/css/<%= sheet %>.css">
+    <% }); %>
+<% } %>
+<% scripts.forEach(function(script) { %>
+    <script><%- script %></script>
+<% }); %>
+<link rel="stylesheet" href="/css/main.css">
