@@ -6,7 +6,10 @@
         <link rel="stylesheet" href="/css/<%= sheet %>.css">
     <% }); %>
 <% } %>
-<% scripts.forEach(function(script) { %>
-    <script><%- script %></script>
-<% }); %>
+<% if (typeof scripts !== 'undefined' && Array.isArray(scripts)) { %>
+    <% scripts.forEach(function(script) { %>
+        <script><%- script %></script>
+    <% }); %>
+<% } %>
+
 <link rel="stylesheet" href="/css/main.css">

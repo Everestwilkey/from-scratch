@@ -1,0 +1,16 @@
+<div class="error-container">
+        <!-- Status Code -->
+        <div class="error-status">
+            <%= locals.statusCode || 500 %>
+        </div>
+
+        <!-- Error Title -->
+        <h1 class="error-title">
+            <%= locals.title || 'An Error Occurred' %>
+        </h1>
+
+        <!-- Error Message -->
+        <div class="error-message">
+            <%= locals.message || 'Something went wrong on our end. Please try again later.' %>
+        </div>
+ </div>

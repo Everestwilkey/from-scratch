@@ -1,0 +1,15 @@
+<div class="game-container">
+    <h2 class="game-title">Explore Our Games</h2>
+    <p class="game-description">Discover and play exciting games from our collection.</p>
+
+    <div class="game-grid">
+        <% games.forEach((game) => { %>
+            <div class="game-card">
+                <img src="<%= game.image_path %>" alt="<%= game.game_name %>">
+                <h3><%= game.game_name %></h3>
+                <p><%= game.game_description %></p>
+                <a href="/category/edit/<%= game.game_id %>">Edit</a>
+            </div>
+        <% }); %>
+    </div>
+</div>

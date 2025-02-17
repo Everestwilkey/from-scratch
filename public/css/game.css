@@ -1,0 +1,130 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a2e;
+    color: #f8faff;
+}
+
+/* Game Section */
+.game-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background-color: #16213e;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Game Title */
+.game-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(255, 215, 0, 0.5);
+}
+
+/* Game Description */
+.game-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #f8faff;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+/* Game Button */
+.game-button {
+    display: inline-block;
+    background-color: #e94560;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 10px rgba(233, 69, 96, 0.3);
+}
+
+.game-button:hover {
+    background-color: #ff004c;
+    transform: scale(1.05);
+}
+
+/* Game Grid */
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+/* Game Card */
+.game-card {
+    background-color: #0f3460;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(15, 52, 96, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.game-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(15, 52, 96, 0.5);
+}
+
+/* Game Card Image */
+.game-card img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Game Card Title */
+.game-card h3 {
+    font-size: 1.2rem;
+    color: #ffd700;
+    margin-top: 1rem;
+}
+
+/* Game Card Description */
+.game-card p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 1.5rem;
+    }
+
+    .game-title {
+        font-size: 2rem;
+    }
+
+    .game-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-title {
+        font-size: 1.8rem;
+    }
+
+    .game-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+}
