@@ -3,6 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import indexRoute from './src/routes/index.js';
 import categoryRoute from './src/routes/category/index.js'
+import categoryCrudRoute from './src/routes/category/category.js'
 import layoutMiddleware from './src/middelware/layout.js';
 import isDevMode from './src/middelware/devmode.js';
 import configureNodeEnvironment from './src/middelware/node-env.js'
@@ -35,6 +36,7 @@ app.use(fileUploads);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/', indexRoute);
+app.use('/category', categoryCrudRoute)
 app.use('/category', categoryRoute);
 app._router.stack.forEach((r) => {
     if (r.route && r.route.path) {

@@ -3,6 +3,8 @@ import fs from 'fs';
 import { addNewGame, getClassifications, getGamesByClassification, getGameById, updateGame } from '../../models/games.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { getClassificationById } from '../../models/Category.js';
+import { isNull } from 'util';
 
 // Fix __dirname issue in ES module environment
 const __filename = fileURLToPath(import.meta.url);
@@ -13,8 +15,12 @@ const router = Router();
 router.get('/view/:id', async (req, res, next) => {  // Added 'next' parameter here
     try {
         const games = await getGamesByClassification(req.params.id);
+        const classification = await getClassificationById(req.params.id) || null
+        console.log(classification)
 
-        if (games.length <= 0) {
+
+
+        if (games.length <= 0 && classification == null) {
             const title = 'Category Not Found';
             const error = new Error(title);
             error.title = title;
@@ -109,5 +115,8 @@ const getVerifiedGameImage = (images = []) => {
 
     // Return the new frontend image path for storage in the database
     return `/images/games/${image.newFilename}`;
+
+
 };
+
 export default router;
